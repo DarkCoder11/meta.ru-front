@@ -1,0 +1,46 @@
+.item {
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+  margin-bottom: 19px;
+  justify-content: space-between;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @include breakpoint(tablet-m) {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+.itemTitle {
+  font-size: 16px;
+  color: $black-color;
+  line-height: 1.5;
+  margin-bottom: 5px;
+}
+
+.itemSubtitle {
+  font-size: $base-font-size;
+  color: #999;
+}
+
+.itemBtn {
+  width: 267px;
+  height: 40px;
+  border-radius: 8px;
+  box-shadow: 0 0 20px -10px rgba(0, 0, 0, 0.5);
+  background-color: $white-color;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $black-color;
+  font-size: 18px;
+
+  @include breakpoint(tablet-m) {
+    width: 100%;
+    margin-top: 10px;
+  }
+}

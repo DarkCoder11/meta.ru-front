@@ -1,0 +1,28 @@
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  -webkit-tap-highlight-color: transparent;
+
+  button {
+    height: 100%;
+    background-color: transparent;
+  }
+}
+
+.rowIcon {
+  transition: $main-transition;
+}
+
+.rowIconReversed {
+  transform: rotate(180deg);
+}
+
+.rowContent {
+  transition: opacity 0.3s ease-in-out;
+}
+
+.rowContentHidden {
+  display: none;
+}

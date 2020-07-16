@@ -1,0 +1,36 @@
+.breadcrumbs {
+  display: flex;
+  flex-wrap: wrap;
+  width: fit-content;
+  padding-top: 30px;
+}
+
+.active_link {
+  cursor: auto !important;
+}
+
+.link {
+  position: relative;
+  padding-left: 15px;
+  font-size: $base-font-size;
+  font-weight: 500;
+  color: $white-color;
+  cursor: pointer;
+
+  &:first-child {
+    padding-left: 0;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  &::after {
+    content: '/';
+    position: absolute;
+    color: #0eaa45;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 5px;
+  }
+}

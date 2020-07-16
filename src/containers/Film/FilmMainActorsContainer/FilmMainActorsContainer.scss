@@ -1,0 +1,130 @@
+.container {
+  position: relative;
+}
+
+.slidLeft {
+  align-items: center;
+  justify-content: center;
+  top: calc(50% - 34px);
+  width: 26px;
+  height: 26px;
+  outline: none;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 10px -5px rgba(0, 0, 0, 0.5);
+  transition: $main-transition;
+  left: -13px;
+  position: absolute;
+  cursor: pointer;
+
+  @include breakpoint(tablet-l) {
+    display: none;
+  }
+}
+
+.slidLeftIcon {
+  transform: rotate(-90deg);
+}
+
+.slidRight {
+  align-items: center;
+  justify-content: center;
+  top: calc(50% - 34px);
+  width: 26px;
+  height: 26px;
+  outline: none;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 10px -5px rgba(0, 0, 0, 0.5);
+  transition: $main-transition;
+  right: -13px;
+  position: absolute;
+  cursor: pointer;
+
+  @include breakpoint(tablet-l) {
+    display: none;
+  }
+}
+
+.slidRightIcon {
+  transform: rotate(90deg);
+}
+
+.title {
+  font-size: 20px;
+  font-weight: bold;
+  color: $black-color;
+}
+
+.items {
+  display: flex;
+  justify-content: space-between;
+  margin: 15px 0;
+
+  @include breakpoint(tablet) {
+    overflow: auto;
+    justify-content: unset;
+    margin-right: -15px;
+  }
+}
+
+.item {
+  min-width: 124px;
+  max-width: 124px;
+  box-shadow: 0 0 20px -10px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+
+  @include breakpoint(tablet) {
+    margin-bottom: 10px;
+    margin-right: 15px;
+    min-width: 135px;
+  }
+
+  p {
+    &:nth-child(2) {
+      padding: 10px 10px 0 10px;
+      margin: 0 auto;
+      font-size: 12px;
+      font-weight: 600;
+      color: $black-color;
+      max-width: 120px;
+      flex-wrap: wrap;
+      display: flex;
+    }
+
+    &:nth-child(3) {
+      margin: 4px 0 10px 10px;
+      color: #9c9c9c;
+      font-size: 12px;
+    }
+  }
+
+
+}
+
+.itemImage {
+  height: 136px;
+  background-image: url(/img/no_actor.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.all {
+  width: 100%;
+  height: 40px;
+  border-radius: 8px;
+  background-color: #e8e8e8;
+  color: $black-color;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: $main-transition;
+
+  &:hover {
+    color: $primary-color;
+  }
+}

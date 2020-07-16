@@ -1,0 +1,100 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding-bottom: 9px;
+  margin-bottom: 31px;
+  padding-top: 40px;
+
+  @include breakpoint(tablet) {
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 30px 15px 9px;
+    margin: 0 -15px 29px;
+    position: relative;
+    width: auto;
+    margin-left: -44px !important;
+  }
+
+
+  &::after {
+    content: '';
+    position: relative;
+    display: block;
+    width: 15px;
+    height: auto;
+    padding: 0 15px 0 0;
+    display: none;
+    border-bottom: 1px solid #fff;
+    top: 9px;
+
+    @include breakpoint(tablet) {
+      display: block;
+    }
+  }
+
+  &::before {
+    content: '';
+    position: relative;
+    display: block;
+    width: 15px;
+    height: auto;
+    padding: 0 0 0 30px;
+    display: none;
+    border-bottom: 1px solid #fff;
+    top: 9px;
+
+    @include breakpoint(tablet) {
+      display: block;
+    }
+  }
+}
+
+.containerItem {
+  font-size: 18px;
+  font-weight: bold;
+  color: #9499a0;
+  transition: 0.5s;
+  position: relative;
+  white-space: nowrap;
+  background-color: transparent;
+
+  &:first-child {
+    @include breakpoint(tablet) {
+      margin-left: 0;
+    }
+  }
+
+  &:hover {
+    @media (min-width: $tablet-l) {
+      color: $black-color;
+
+      &::after {
+        right: 0;
+      }
+    }
+  }
+
+  &.active {
+    color: $black-color;
+
+    &::after {
+      right: 0;
+    }
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    right: 100%;
+    bottom: -9px;
+    left: 0;
+    height: 1px;
+    background: $primary-color;
+    transition: $main-transition;
+  }
+
+  @include breakpoint(tablet) {
+    margin-left: 15px;
+  }
+}

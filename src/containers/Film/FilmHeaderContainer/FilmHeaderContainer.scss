@@ -1,0 +1,133 @@
+.container {
+  height: 349px;
+  margin-top: -60px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  position: relative;
+
+  @include breakpoint(tablet-l) {
+    height: 393px;
+    background-position: right;
+  }
+
+  @include breakpoint(tablet) {
+    height: 423px;
+  }
+
+  @include breakpoint(tablet-m) {
+    background-position: center;
+    height: 473px;
+  }
+}
+
+.noBackground {
+  background-image: none;
+}
+
+.linearTop {
+  top: 0;
+  z-index: 2;
+  height: 137px;
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0), #000000);
+  left: 0;
+  right: 0;
+  position: absolute;
+
+  @include breakpoint(tablet) {
+    height: 168px;
+  }
+}
+
+.linearBottom {
+  bottom: 0;
+  height: 212px;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), #000000 98%);
+  left: 0;
+  right: 0;
+  position: absolute;
+
+  @include breakpoint(tablet) {
+    height: 280px;
+  }
+}
+
+.nav {
+  background: unset;
+  position: relative;
+  z-index: 3;
+}
+
+.navLink {
+  color: #c7c7c7;
+
+  &:hover {
+    color: $white-color;
+  }
+}
+
+.navLinkMobile {
+  color: $grey-color;
+}
+
+.navLinkActive {
+  color: $black-color !important;
+}
+
+.navFilms {
+  @include breakpoint(tablet-l) {
+    display: block;
+  }
+}
+
+.navFilmsOpen {
+  fill: $white-color;
+}
+
+.navFilmsMenu {
+  @include breakpoint(tablet-l) {
+    display: block;
+  }
+
+  a {
+    @include breakpoint(tablet-l) {
+      display: none;
+      border: none;
+    }
+
+    &:last-child {
+      display: block;
+      display: flex;
+
+      &::after {
+        right: unset;
+      }
+    }
+  }
+}
+
+.navActive {
+  color: $white-color !important;
+}
+
+.breadcrumbs {
+  position: relative;
+  z-index: 999;
+
+  @include breakpoint(tablet-m) {
+    display: none;
+  }
+
+  a {
+    color: $white-color;
+  }
+
+  div {
+    color: $white-color;
+    font-weight: normal;
+
+    &::after {
+      color: $white-color;
+    }
+  }
+}

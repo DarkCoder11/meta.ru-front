@@ -1,0 +1,58 @@
+.nav {
+  padding: 10px;
+  box-shadow: 0 0 20px -10px rgba(0, 0, 0, 0.5);
+  background: $white-color;
+  margin-bottom: -60px;
+}
+
+.sticky {
+  position: sticky;
+  width: 100%;
+  bottom: 0;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.count {
+  min-width: 40px;
+  height: 40px;
+  border-radius: 6px;
+  background-color: $light-green-color;
+  font-size: 24px;
+  font-weight: bold;
+  color: $white-color;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo {
+  height: 36px;
+  max-width: 66px;
+  object-fit: contain;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.startPlay {
+  width: 200px;
+  height: 40px;
+  border-radius: 6px;
+  background-color: $primary-color;
+  font-size: 18px;
+  font-weight: bold;
+  color: $white-color;
+
+  &:hover {
+    background-color: $light-green-color;
+  }
+
+  @include breakpoint(tablet) {
+    font-size: 16px;
+  }
+}

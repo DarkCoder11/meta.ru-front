@@ -1,0 +1,55 @@
+version: '3'
+
+services:
+  metamovies_front:
+    container_name: "metamovies_front"
+    env_file: .env
+    build:
+      context: .
+      dockerfile: Dockerfile
+    # command: npm start
+    expose:
+      - 3000
+    volumes:
+      - build_volume:/app/build
+    networks:
+      - nginx_network
+
+  metamovies_front_nginx:
+    container_name: "metamovies_front_nginx"
+    image: nginx
+    entrypoint: /code/run_nginx.sh
+    environment:
+      - VIRTUAL_HOST=$VIRTUAL_HOST
+      - LETSENCRYPT_HOST=$VIRTUAL_HOST
+    labels:
+      - 'traefik.enable=true'
+      - 'traefik.http.routers.metamovies_front_nginx-https.rule=Host("$VIRTUAL_HOST")'
+      - 'traefik.http.routers.metamovies_front_nginx-https.tls.certresolver=httpchallenge_0'
+      - 'traefik.http.routers.metamovies_front_nginx-http.rule=Host("$VIRTUAL_HOST")'
+      - 'traefik.http.routers.metamovies_front_nginx-http.middlewares=redirect_middleware'
+      - 'traefik.http.middlewares.redirect_middleware.redirectscheme.scheme=https'
+    expose:
+      - 80
+    ports:
+      - "8001:80"
+    restart: always
+    networks:
+      - traefik_network
+      - nginx_network
+    volumes:
+      - ./nginx:/code
+      - build_volume:/usr/share/nginx/html
+    depends_on:
+      - metamovies_front
+
+
+networks:
+  traefik_network:
+    external:
+      name: traefik_network
+  nginx_network:
+    driver: bridge
+
+volumes:
+  build_volume:

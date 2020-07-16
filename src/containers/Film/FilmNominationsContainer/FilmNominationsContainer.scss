@@ -1,0 +1,84 @@
+.container {
+  width: 100%;
+  border-radius: 8px;
+  background-color: #f7f7f7;
+  padding: 15px;
+
+  @include breakpoint(tablet-l) {
+    width: calc(100% + 30px);
+    margin-left: -15px;
+  }
+}
+
+.title {
+  font-size: 20px;
+  font-weight: bold;
+  color: $black-color;
+}
+
+.items {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 15px;
+
+  @include breakpoint(tablet) {
+    flex-direction: column;
+  }
+
+  button {
+    width: 100%;
+    height: 40px;
+    border-radius: 8px;
+    background-color: #e8e8e8;
+    color: $black-color;
+    font-size: 15px;
+    margin-top: 5px;
+    transition: $main-transition;
+
+    &:hover {
+      color: $primary-color;
+    }
+  }
+}
+
+.item {
+  width: 320px;
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 8px;
+  background-color: $white-color;
+  padding: 15px;
+  margin-bottom: 11px;
+
+  @include breakpoint(tablet-l) {
+    width: 100%;
+  }
+}
+
+.itemIcon {
+  display: flex;
+
+  svg {
+    width: 30px;
+    height: 50px;
+    margin-right: 10px;
+  }
+}
+
+.itemContent {
+  p {
+    &:nth-child(1) {
+      font-size: 18px;
+    }
+
+    &:nth-child(2) {
+      color: #e8bf42;
+      margin-top: 10px;
+
+      span {
+        color: #9c9c9c;
+      }
+    }
+  }
+}

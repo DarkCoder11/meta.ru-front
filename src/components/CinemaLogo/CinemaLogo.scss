@@ -1,0 +1,25 @@
+.container {
+  height: 36px;
+  max-width: 66px;
+  object-fit: contain;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  cursor: pointer;
+
+  @include breakpoint(tablet-l) {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  @include breakpoint(tablet-m) {
+    margin-left: 25px;
+    margin-right: 25px;
+    max-width: 60px;
+  }
+
+  @include breakpoint(mobile-m) {
+    max-width: 50px;
+  }
+}

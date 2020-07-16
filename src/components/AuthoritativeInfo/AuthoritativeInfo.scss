@@ -1,0 +1,80 @@
+.container {
+  border-radius: 8px;
+  background-color: #f7f7f7;
+  padding: 15px;
+  margin-top: 29px;
+  padding-bottom: 5px;
+
+  @include breakpoint(tablet-m) {
+    margin: 30px -15px 0;
+    border-radius: 0;
+  }
+}
+
+.item {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: bold;
+  color: $black-color;
+}
+
+.titleRow {
+    margin-bottom: 0 !important;
+}
+
+.sliderItem {
+  height: 50px;
+  margin: 15px 5px 10px 5px;
+  border-radius: 8px;
+  box-shadow: 0 0 20px -10px rgba(0, 0, 0, 0.5);
+  background-color: $white-color;
+  padding: 15px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  cursor: pointer;
+
+  @include breakpoint(tablet-m) {
+    height: 60px;
+    margin: 15px 7.5px 10px 7.5px;
+  }
+
+  img {
+    max-width: 182px;
+    height: 30px;
+  }
+}
+
+.sliderCount {
+  min-width: 30px;
+  height: 30px;
+  border-radius: 4px;
+  background-color: #9499a0;
+  font-size: 18px;
+  font-weight: bold;
+  color: $white-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+
+  @include breakpoint(tablet-m) {
+    font-size: 16px;
+  }
+}
+
+.carousel {
+  position: static !important;
+  width: calc(100% + 10px);
+  margin-left: -5px;
+
+  @include breakpoint(tablet-m) {
+    width: unset;
+    margin-right: -15px;
+    margin-left: -5px;
+  }
+}

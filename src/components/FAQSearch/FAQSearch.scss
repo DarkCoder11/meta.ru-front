@@ -1,0 +1,35 @@
+.bar {
+  position: relative;
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 2px 20px -10px rgba(8, 11, 42, 0.5);
+  background-color: $white-color;
+  height: 40px;
+  overflow: hidden;
+
+  input {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    padding: 0 55px 0 15px;
+
+    &::placeholder {
+      font-size: 15px;
+      color: #999;
+    }
+  }
+}
+
+.btn {
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  background: #6220c1;
+  right: 0;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

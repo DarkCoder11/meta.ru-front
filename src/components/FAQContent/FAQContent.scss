@@ -1,0 +1,11 @@
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.link {
+  font-size: 16px;
+  color: $black-color;
+  text-decoration: underline !important;
+  margin-top: 15px;
+}

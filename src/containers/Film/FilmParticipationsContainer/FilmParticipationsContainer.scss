@@ -1,0 +1,61 @@
+.container {
+  width: 100%;
+  border-radius: 8px;
+  background-color: #f7f7f7;
+  padding: 15px;
+  margin: 40px 0;
+
+  @include breakpoint(tablet-l) {
+    width: calc(100% + 30px);
+    margin-left: -15px;
+  }
+
+  h2 {
+    font-size: 20px;
+    font-weight: bold;
+    color: $black-color;
+  }
+}
+
+.title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.top {
+  width: 100%;
+  padding: 10px;
+  background: $white-color;
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.topRating {
+  min-width: 44px;
+  height: 30px;
+  background: #cb8446;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  color: $white-color;
+  font-size: 18px;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.topRate {
+  min-width: 44px;
+  height: 30px;
+  background: #e8e8e8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  color: $black-color;
+  font-size: 18px;
+  font-weight: bold;
+  margin-right: 10px;
+}

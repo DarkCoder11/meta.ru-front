@@ -1,0 +1,98 @@
+.container {
+  border-radius: 8px;
+  background-color: #f7f7f7;
+  padding: 10px 15px 15px;
+
+  @include breakpoint(tablet) {
+    border-radius: 15px;
+    margin-left: -16px;
+    margin-right: -15px;
+    padding: 0;
+  }
+}
+
+.noBackground {
+  background: none;
+  height: 130px;
+
+  @include breakpoint(tablet-l) {
+    height: 90px;
+  }
+
+  @include breakpoint(tablet) {
+    height: 42px;
+  }
+
+  @include breakpoint(tablet-m) {
+    height: 14px;
+    min-height: 151px;
+  }
+}
+
+.response {
+  flex-direction: column;
+  padding: 0 15px;
+  display: none;
+
+  @include breakpoint(tablet) {
+    display: block;
+  }
+}
+
+.responseItem {
+  &:hover {
+    color: $black-color;
+  }
+}
+
+.responseActive {
+  color: $black-color;
+}
+
+.responseTitle {
+  font-size: 20px;
+  font-weight: bold;
+  padding: 15px 0;
+}
+
+.responseTitleDividers {
+  width: 100%;
+  height: 1px;
+  margin: 9px 0;
+  background-color: #d5d5d5;
+}
+
+.offers {
+  display: flex;
+  justify-content: center;
+
+  @include breakpoint(tablet) {
+    padding: 15px;
+  }
+}
+
+.offersBtn {
+  width: 100%;
+  height: 40px;
+  border-radius: 8px;
+  background-color: #e8e8e8;
+  margin-top: 19px;
+  font-size: 15px;
+  transition: $main-transition;
+
+  @include breakpoint(tablet) {
+    display: block;
+    margin: 0;
+  }
+
+  &:hover {
+    color: $primary-color;
+  }
+}
+
+.offersBtnMore {
+  width: unset;
+  transition: unset;
+  background-color: transparent;
+  text-decoration: underline;
+}

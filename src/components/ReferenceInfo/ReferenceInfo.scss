@@ -1,0 +1,80 @@
+.container {
+  border-radius: 8px;
+  background-color: #f7f7f7;
+  padding: 15px;
+  margin-top: 40px;
+
+  @include breakpoint(tablet-m) {
+    margin: 40px -15px 0;
+    border-radius: 0;
+  }
+}
+
+.title {
+  font-size: 22px;
+  font-weight: bold;
+  color: $black-color;
+
+  @include breakpoint(tablet-m) {
+    margin-bottom: 0;
+  }
+
+  @include breakpoint(mobile-m) {
+    font-size: 20px;
+  }
+}
+
+.text {
+  font-size: 16px;
+  line-height: 1.38;
+  color: $black-color;
+
+  @include breakpoint(tablet-m) {
+    margin-top: 15px;
+  }
+}
+
+.item {
+  padding-left: 13px;
+  border-left: 1px solid #d8d8d8;
+  max-width: 280px;
+  width: 100%;
+  margin-left: 15px;
+
+  &:first-child {
+    margin-left: 0;
+
+    @include breakpoint(tablet-m) {
+      margin-bottom: 20px;
+    }
+  }
+
+  @include breakpoint(tablet-m) {
+    margin-left: 0;
+  }
+}
+
+.itemTitle {
+  font-size: 16px;
+  color: #999;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.itemText {
+  font-size: 16px;
+  font-weight: bold;
+  color: $black-color;
+  line-height: 1.5;
+}
+
+.content {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding-top: 15px;
+
+  @include breakpoint(tablet-m) {
+    flex-direction: column;
+  }
+}

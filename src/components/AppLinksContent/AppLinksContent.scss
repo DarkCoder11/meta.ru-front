@@ -1,0 +1,99 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.downloadText {
+  font-size: 12px;
+  color: $white-color;
+
+  @include breakpoint(mobile) {
+    font-size: 10px;
+  }
+}
+
+.item {
+  width: 220px;
+  height: 40px;
+  border-radius: 8px;
+  position: relative;
+  background: $black-color;
+  padding: 3px 15px;
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 10px;
+  margin-left: 10px;
+
+  &:nth-child(3n + 1),
+  &:first-child {
+    margin-left: 0;
+  }
+
+  @include breakpoint(tablet-l) {
+    width: calc(33.3% - 6.6px);
+  }
+
+  @include breakpoint(tablet) {
+    margin-left: 10px;
+    padding: 3px 10px;
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+
+  @include breakpoint(tablet-m) {
+    width: calc(50% - 7.5px);
+    padding: 3px 10px;
+    margin-left: 15px;
+
+    &:nth-child(3n + 1) {
+      margin-left: 15px;
+    }
+
+    &:nth-child(2n + 1) {
+      margin-left: 0px;
+    }
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+
+  img {
+    max-width: 70px;
+
+    @include breakpoint(tablet) {
+      max-width: 50px;
+    }
+
+    @include breakpoint(mobile) {
+      max-width: 40px;
+    }
+  }
+}
+
+.itemBottom {
+  display: flex;
+  flex-direction: column;
+  margin-left: 15px;
+}
+
+.itemName {
+  font-size: 16px;
+  font-weight: bold;
+  color: $white-color;
+
+  @include breakpoint(tablet) {
+    font-size: 15px;
+  }
+
+  @include breakpoint(tablet-m) {
+    font-size: 12px;
+  }
+
+  @include breakpoint(mobile) {
+    font-size: 10px;
+    margin-top: 5px;
+  }
+}

@@ -1,0 +1,47 @@
+version: '3'
+
+services:
+  metamovies_front:
+    container_name: "metamovies_front"
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: npm start
+    expose:
+      - 3000
+    volumes:
+      - build_volume:/app/build
+    networks:
+      - nginx_network
+
+  metamovies_front_nginx:
+    container_name: "metamovies_front_nginx"
+    image: nginx
+    entrypoint: /code/run_nginx.sh
+    environment:
+      - VIRTUAL_HOST=$VIRTUAL_HOST
+      - LETSENCRYPT_HOST=$VIRTUAL_HOST
+    expose:
+      - 80
+    ports:
+      - "8001:80"
+    restart: always
+    networks:
+      - nginx-proxy
+      - nginx_network
+    volumes:
+      - ./nginx:/code
+      - build_volume:/usr/share/nginx/html
+    depends_on:
+      - metamovies_front
+
+
+networks:
+  nginx-proxy:
+    external:
+      name: nginx-proxy
+  nginx_network:
+    driver: bridge
+
+volumes:
+  build_volume:

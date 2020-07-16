@@ -1,0 +1,35 @@
+.container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 82px;
+  height: 40px;
+  margin-right: 15px;
+  padding: 6px;
+  padding-left: 41px;
+  border-radius: 4px;
+  background-color: #f7f7f7;
+  font-size: 16px;
+  line-height: 28px;
+  font-weight: bold;
+  color: black;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 6px;
+    display: block;
+    width: 28px;
+    height: 28px;
+    border-radius: 4px;
+    background-color: $white-color;
+    background-image: url('/img/reviews__overview.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 18px $base-font-size;
+  }
+}
+
+.ratings_content__item .reviews__wrap {
+  margin-right: -10px;
+}

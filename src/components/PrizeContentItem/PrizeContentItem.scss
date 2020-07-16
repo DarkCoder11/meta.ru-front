@@ -1,0 +1,56 @@
+.prize {
+  width: 320px;
+  display: flex;
+  padding: 15px;
+  background: #fff;
+  border-radius: 8px;
+  margin-bottom: 15px;
+
+  @include breakpoint(tablet-l) {
+    width: 100%;
+  }
+}
+
+.icon {
+  display: flex;
+  justify-content: center;
+  margin-right: 16px;
+  align-self: baseline;
+  width: 15px;
+  height: 50px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
+.contentTitle {
+  font-weight: bold;
+  padding: 3px 0 10px;
+}
+
+.contentSubtitle {
+  color: #e8bf42;
+}
+
+.contentText {
+  padding: 10px 0 20px;
+
+  p {
+    line-height: 22px;
+  }
+}
+
+.contentNomination {
+  color: #9c9c9c;
+
+  p {
+    line-height: 22px;
+  }
+}
+
+.contentNominationTitle {
+  font-weight: bold;
+  padding-bottom: 10px;
+}

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="140px" height="22px" viewBox="0 0 140 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.4 (67378) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 4</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="63.809892%" y1="83.5960925%" x2="32.3301087%" y2="4.18836189%" id="linearGradient-1">
+            <stop stop-color="#FCD08F" offset="0%"></stop>
+            <stop stop-color="#F79673" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="87.2564115%" y1="13.4677612%" x2="13.5510427%" y2="116.386396%" id="linearGradient-2">
+            <stop stop-color="#E74047" offset="0%"></stop>
+            <stop stop-color="#7F50A0" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="87.6749398%" y1="85.4868908%" x2="12.8241649%" y2="-15.9805828%" id="linearGradient-3">
+            <stop stop-color="#E6FFAB" offset="0%"></stop>
+            <stop stop-color="#47BEBC" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="50.0011435%" y1="99.9998449%" x2="50.0011435%" y2="0.000388913438%" id="linearGradient-4">
+            <stop stop-color="#84E9DB" offset="0%"></stop>
+            <stop stop-color="#197491" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="1440-новое--иви-обзор-кино-copy-5" transform="translate(-566.000000, -648.000000)">
+            <g id="Group-4" transform="translate(566.000000, 646.000000)">
+                <text id="Google-Play" font-family="Helvetica-Bold, Helvetica" font-size="19" font-weight="bold" fill="#666666">
+                    <tspan x="30" y="19">Google Play</tspan>
+                </text>
+                <g id="Google_Play_logo" transform="translate(0.000000, 2.000000)">
+                    <path d="M15.4271945,14.2616569 C18.0717428,12.8498733 20.0914393,11.7715048 20.2751582,11.6733025 C20.8232009,11.3807206 21.3973656,10.6340799 20.2751582,10.0372736 C19.9144672,9.8450874 17.9490905,8.79979043 15.4240807,7.45617465 L11.9512406,10.8694616 L15.4271945,14.2616569 Z" id="path16" fill="url(#linearGradient-1)"></path>
+                    <path d="M11.9510676,10.8694616 L0.843515223,21.7861081 C1.09435548,21.8171549 1.39605575,21.7523616 1.74308027,21.5670935 C2.46152135,21.1835649 10.1770216,17.0643018 15.4271945,14.2613195 L11.9510676,10.8694616 Z" id="path23" fill="url(#linearGradient-2)"></path>
+                    <path d="M11.9510676,10.8694616 L15.4239077,7.45617465 C15.4239077,7.45617465 2.51584124,0.587249086 1.74308027,0.176048325 C1.44605081,0.0179461089 1.12220739,-0.0372293728 0.835557533,0.025032868 L11.9510676,10.8694616 Z" id="path30" fill="url(#linearGradient-3)"></path>
+                    <path d="M11.9510676,10.8694616 L0.835384539,0.0252016003 C0.37626038,0.125091157 0,0.512669383 0,1.29170669 C0,2.55719932 0,19.4225052 0,20.4850129 C0,21.2186612 0.295991499,21.7346447 0.84334223,21.7861081 L11.9510676,10.8694616 Z" id="path37" fill="url(#linearGradient-4)"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

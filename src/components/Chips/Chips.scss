@@ -1,0 +1,73 @@
+.content {
+  display: flex;
+  padding-top: 10px;
+
+  @include breakpoint(tablet-l) {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
+.icon {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  top: 23px;
+  width: 22px;
+  height: 22px;
+
+  @include breakpoint(tablet-m) {
+    position: static;
+    margin: unset;
+    margin-right: 10px;
+  }
+}
+
+.btn {
+  width: 105px;
+  height: 89px;
+  border-radius: 8px;
+  background-color: #f7f7f7;
+  margin-left: 10px;
+  padding: 0 5px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  position: relative;
+
+  &:first-child {
+    margin-left: 0;
+  }
+
+  &:nth-last-child(2),
+  &:last-child {
+    @include breakpoint(tablet-l) {
+      margin-top: 15px;
+    }
+  }
+
+  @include breakpoint(tablet-l) {
+    margin-left: 0;
+    width: calc(50% - 5px);
+  }
+
+  @include breakpoint(tablet-m) {
+    background: $white-color;
+    height: 42px;
+    padding: 0 10px;
+    justify-content: flex-start;
+    align-items: center;
+  }
+}
+
+.btnTitle {
+  font-size: $base-font-size;
+  font-weight: bold;
+  color: $black-color;
+  text-align: center;
+
+  @include breakpoint(mobile-m) {
+    font-size: 13px;
+  }
+}

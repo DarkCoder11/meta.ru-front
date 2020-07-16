@@ -1,0 +1,95 @@
+.main {
+  border-radius: 10px;
+  background-color: $white-color;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  padding: 10px;
+  height: 100%;
+  width: 100%;
+  transition: box-shadow 0.6s;
+
+  &:hover {
+    box-shadow: 0 0 25px -8px rgba(0, 0, 0, 0.7);
+    transition: box-shadow 0.6s;
+  }
+
+  @include breakpoint(tablet-l) {
+    min-width: 136px;
+  }
+
+  @include breakpoint(tablet) {
+    min-width: 108px;
+  }
+}
+
+.best {
+  margin-top: -18px;
+  height: calc(100% - 35px);
+}
+
+.container {
+  min-width: 124px;
+  height: 192px;
+  box-shadow: 0 0 20px -10px rgba(0, 0, 0, 0.5);
+}
+
+.label {
+  width: 100%;
+  height: 53px;
+  padding-top: 9px;
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
+  box-shadow: 0 0 20px -10px rgba(0, 0, 0, 0.5);
+  background-color: $light-green-color;
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 0.1px;
+  text-align: center;
+  color: $white-color;
+  text-transform: uppercase;
+}
+
+.rate {
+  min-width: 30px;
+  max-width: 30px;
+  min-height: 30px;
+  border-radius: 4px;
+  font-size: 16px;
+  margin: 0;
+}
+
+.content {
+  width: 100%;
+  height: 71px;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), black);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  padding-left: 10px;
+}
+
+.contentFilmName {
+  color: $white-color;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 1.5;
+
+  @include breakpoint(tablet) {
+    font-size: 11px;
+    line-height: 1.64;
+  }
+}
+
+.contentFilmData {
+  padding-bottom: 9px;
+  font-size: 12px;
+  line-height: 1.5;
+  color: #9c9c9c;
+}

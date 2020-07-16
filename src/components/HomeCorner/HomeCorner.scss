@@ -1,0 +1,15 @@
+.part {
+  position: absolute;
+  top: 60px;
+  right: 0;
+  z-index: -1;
+  width: 50%;
+
+   @include breakpoint(tablet-l) {
+    width: 45%;
+  }
+
+   @include breakpoint(tablet){
+    display: none;
+  }
+}

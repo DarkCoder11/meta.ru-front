@@ -1,0 +1,280 @@
+.container {
+  display: flex;
+  align-items: center;
+
+  @include breakpoint(tablet-l) {
+    display: none;
+  }
+}
+
+.open {
+  @include breakpoint(tablet-l) {
+    position: absolute;
+    top: 44px;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    height: calc(100vh - 44px);
+    max-height: calc(100vh - 44px);
+    padding: 0 15px;
+    background: $white-color;
+    overflow-y: auto;
+    z-index: 999;
+  }
+}
+
+.link {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  font-weight: bold;
+  color: $grey-color;
+  margin-left: 30px;
+  position: relative;
+  cursor: pointer;
+  transition: $main-transition;
+
+  &:first-child {
+    margin-left: 0;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    right: 100%;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    background: $primary-color;
+    transition: $main-transition;
+  }
+
+  &:hover {
+    color: $black-color;
+
+    path {
+      fill: $primary-color;
+    }
+
+    &::after {
+      right: 0;
+    }
+  }
+
+  @include breakpoint(tablet-l) {
+    min-height: 60px;
+    margin-left: 0;
+    font-size: $base-font-size;
+  }
+
+  @include breakpoint(tablet-m) {
+    margin-left: 0;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 13px 0;
+    border-bottom: 1px solid #f0f0f0;
+    width: 100%;
+  }
+
+  &:hover,
+  &__active {
+    @include breakpoint(tablet-m) {
+      color: $grey-color;
+    }
+  }
+
+  &:hover,
+  &__active::after {
+    @include breakpoint(tablet-m) {
+      right: unset;
+    }
+  }
+
+  &__active {
+    color: $black-color;
+
+    path {
+      fill: $primary-color;
+    }
+
+    &::after {
+      right: 0;
+    }
+  }
+}
+
+.dropdown {
+  position: relative;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  margin-left: 30px;
+  cursor: pointer;
+  background: transparent;
+  transition: right 0.3s ease-in-out;
+  font-size: 16px;
+  line-height: 1;
+  font-family: inherit;
+
+  .dropdownList {
+    display: none;
+  }
+
+  @include breakpoint(tablet-l) {
+    width: auto;
+    top: 0;
+    margin-left: 0;
+  }
+  @include breakpoint(tablet-m) {
+    width: 100%;
+  }
+}
+
+.dropdownActive {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  margin-left: 30px;
+  cursor: pointer;
+  background: transparent;
+  transition: right 0.3s ease-in-out;
+  padding: 0;
+  z-index: 1000;
+  font-size: 16px;
+  line-height: 1;
+  font-family: inherit;
+
+  & > * {
+    position: relative;
+    display: flex;
+    margin-left: 0;
+  }
+
+  .dropdownArrow {
+    transform: rotate(-135deg) translateY(0%);
+    transition: all .3s;
+  }
+
+  @include breakpoint(tablet-l) {
+    width: auto;
+    top: 0;
+    margin-left: 0;
+  }
+}
+
+.dropdownList {
+  position: absolute;
+  top: calc(100% + 10px);
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 10px 8px 1px rgba(70, 47, 47, 0.5);
+  overflow: hidden;
+  animation: dropDown .3s ease-in-out;
+  z-index: 1100;
+
+
+  a:hover  {
+    color: black;
+  }
+
+  & > * {
+    margin-left: 0;
+    padding: 0 20px;
+
+    @include breakpoint(tablet-l) {
+      padding: 0;
+    }
+  }
+
+  @include breakpoint(tablet-l) {
+    position: relative;
+    top: 0;
+    box-shadow: none;
+  }
+  @include breakpoint(tablet-m) {
+    width: calc(100vw - 30px);
+  }
+
+  .link {
+    text-align: left;
+  }
+
+  @keyframes dropDown {
+    from {
+      transform: translateY(calc(-50% - 70px));
+      opacity: 0;
+    }
+    45% {
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+}
+
+.dropdownListUpperWrap {
+  position: absolute;
+  top: 100%;
+  display: block;
+  width: 100%;
+  height: 10px;
+  background: transparent;
+  z-index: 30;
+}
+
+.dropdownTitle {
+  display: flex;
+  height: 60px;
+  padding: 0;
+  align-items: center;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  color: #7c7c7c;
+
+  @include breakpoint(tablet-l) {
+    text-align: left;
+    font-size: 14px;
+  }
+  @include breakpoint(tablet-m) {
+    width: calc(100vw - 30px);
+    border-bottom: 1px solid #f0f0f0;
+  }
+}
+
+.dropdownArrow {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  margin-left: 5px;
+  background: transparent;
+  border-bottom: solid 1px #7c7c7c;
+  border-right: solid 1px #7c7c7c;
+  transform: rotate(45deg) translateY(-50%);
+  transition: all .3s;
+}
+
+.overlay {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(12, 12, 22, .5);
+  z-index: 10;
+  animation: fade .3s ease-in-out;
+
+  @keyframes fade {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+}

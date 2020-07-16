@@ -1,0 +1,20 @@
+.container {
+  width: fit-content;
+  height: 30px;
+  border-radius: 4px;
+  background-color: #f7f7f7;
+  padding: 0 8px;
+  font-size: $base-font-size;
+  color: #999;
+  margin-right: 10px;
+  transition: $main-transition;
+
+  &:hover {
+    background: #e1e0e0;
+    color: $black-color;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+}

@@ -1,0 +1,79 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  @include breakpoint(tablet) {
+    overflow: auto;
+    flex-wrap: nowrap !important;
+    margin-left: -15px;
+
+    &::after {
+      content: '';
+      position: relative;
+      width: 15px;
+      height: 1px;
+      padding: 0 0 0 15px;
+      top: 9px;
+
+      @include breakpoint(tablet) {
+        display: block;
+      }
+    }
+
+    &::before {
+      content: '';
+      position: relative;
+      width: 15px;
+      height: 1px;
+      padding: 0 0 0 15px;
+      top: 9px;
+
+      @include breakpoint(tablet) {
+        display: block;
+      }
+    }
+  }
+
+  @include breakpoint(tablet-m) {
+    margin-top: 15px;
+  }
+}
+
+.item {
+  max-width: 320px;
+  width: 100%;
+  border-radius: 8px;
+  background-color: $white-color;
+  padding: 10px 10px 5px 10px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: flex-start;
+
+  @include breakpoint(tablet) {
+    margin-left: 15px;
+    min-width: 252px;
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+}
+
+.itemTitle {
+  font-size: 15px;
+  color: $black-color;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.itemText {
+  font-size: $base-font-size;
+  color: $black-color;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.itemTextBlock {
+  margin-left: 8px;
+}

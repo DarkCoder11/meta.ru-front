@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="26px" viewBox="0 0 24 26" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.4 (67378) - http://www.bohemiancoding.com/sketch -->
+    <title>Google_Play_logo</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="63.809892%" y1="83.5960925%" x2="32.3301087%" y2="4.18836189%" id="linearGradient-1">
+            <stop stop-color="#FCD08F" offset="0%"></stop>
+            <stop stop-color="#F79673" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="87.2564115%" y1="13.4677612%" x2="13.5510427%" y2="116.386396%" id="linearGradient-2">
+            <stop stop-color="#E74047" offset="0%"></stop>
+            <stop stop-color="#7F50A0" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="87.6749398%" y1="85.4868908%" x2="12.8241649%" y2="-15.9805828%" id="linearGradient-3">
+            <stop stop-color="#E6FFAB" offset="0%"></stop>
+            <stop stop-color="#47BEBC" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="50.0011435%" y1="99.9998449%" x2="50.0011435%" y2="0.000388913438%" id="linearGradient-4">
+            <stop stop-color="#84E9DB" offset="0%"></stop>
+            <stop stop-color="#197491" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="1440-новое--иви-обзор-кино-copy-5" transform="translate(-745.000000, -1287.000000)">
+            <g id="Google_Play_logo" transform="translate(745.000000, 1287.000000)">
+                <path d="M17.6310795,16.8546855 C20.6534203,15.1862139 22.9616449,13.9117783 23.1716093,13.7957212 C23.7979439,13.4499425 24.4541321,12.567549 23.1716093,11.8622324 C22.7593911,11.6351033 20.5132463,10.3997523 17.6275208,8.81184277 L13.6585607,12.8457273 L17.6310795,16.8546855 Z" id="path16" fill="url(#linearGradient-1)"></path>
+                <path d="M13.658363,12.8457273 L0.964017398,25.7472187 C1.25069197,25.7839103 1.59549229,25.7073365 1.99209174,25.4883832 C2.81316726,25.0351221 11.6308818,20.1669021 17.6310795,16.8542866 L13.658363,12.8457273 Z" id="path23" fill="url(#linearGradient-2)"></path>
+                <path d="M13.658363,12.8457273 L17.6273231,8.81184277 C17.6273231,8.81184277 2.87524713,0.694021647 1.99209174,0.208057111 C1.6526295,0.0212090378 1.28252274,-0.0439983496 0.954922894,0.0295842985 L13.658363,12.8457273 Z" id="path30" fill="url(#linearGradient-3)"></path>
+                <path d="M13.658363,12.8457273 L0.954725188,0.0297837095 C0.430011862,0.147835004 0,0.605881998 0,1.52656245 C0,3.02214465 0,22.9538698 0,24.2095607 C0,25.0765996 0.338275998,25.6863983 0.963819692,25.7472187 L13.658363,12.8457273 Z" id="path37" fill="url(#linearGradient-4)"></path>
+            </g>
+        </g>
+    </g>
+</svg>

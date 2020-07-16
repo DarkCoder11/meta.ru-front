@@ -1,0 +1,30 @@
+.slider {
+  position: relative;
+}
+
+.arrow {
+  position: absolute;
+  border-radius: 50%;
+  background-color: $white-color;
+  width: 26px;
+  height: 26px;
+  box-shadow: 0 0 10px -5px rgba(0, 0, 0, 0.2);
+  border: solid 0.5px #ebebeb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 50%;
+  transform: translateY(-50%);
+
+   @include breakpoint(tablet-l) {
+    display: none;
+  }
+}
+
+.arrowRight {
+  right: -28px;
+}
+
+.arrowLeft {
+  left: -28px;
+}

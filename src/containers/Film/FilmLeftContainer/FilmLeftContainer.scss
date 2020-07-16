@@ -1,0 +1,78 @@
+.photo {
+  border-radius: 8px;
+  background-color: #f7f7f7;
+}
+
+.photoRate {
+  width: 200px;
+  height: 300px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+  padding: 12px 0 0 12px;
+  border-radius: 8px;
+  position: relative;
+}
+
+.photoRateRank {
+  min-width: 36px;
+  min-height: 36px;
+  border-radius: 4px;
+  font-size: 20px;
+  cursor: pointer;
+  position: absolute;
+  bottom: 12px;
+}
+
+.photoRating {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.runetSticky {
+  top: 15px;
+}
+
+.marks {
+  width: 200px;
+  padding: 10px;
+  border-radius: 8px;
+  background-color: #f7f7f7;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+.marksComment {
+  width: 100%;
+  height: 90px;
+  border: none;
+  resize: none;
+  margin: 10px 0;
+  font-size: $base-font-size;
+  border-radius: 4px;
+  padding: 8px 10px;
+  background-color: $white-color;
+  font-family: $base-font-family;
+}
+
+.marksLabel {
+  color: black;
+  font-weight: bold;
+  font-size: $base-font-size;
+}
+
+.marksStar {
+  margin: 10px 0 0;
+  background: $white-color;
+}
+
+.publishBtn {
+  width: 100%;
+  height: 34px;
+  font-size: $base-font-size;
+  font-weight: bold;
+  border-radius: 8px;
+  background-color: #e8e8e8;
+}

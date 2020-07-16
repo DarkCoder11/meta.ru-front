@@ -1,0 +1,75 @@
+.title {
+  margin-bottom: 14px;
+  line-height: 38px;
+  font-size: 29px;
+  font-weight: bold;
+  color: black;
+
+  @include breakpoint(tablet-m) {
+    font-size: 24px;
+  }
+}
+
+.secondaryTitle {
+  display: block;
+  margin-bottom: 11px;
+  font-size: 16px;
+  line-height: 1.5;
+  color: black;
+}
+
+.searchTitle {
+  margin-top: -10px;
+  margin-bottom: 40px;
+  background: transparent;
+  text-decoration: underline;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #7c7c7c;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(9,9,9, .5);
+  z-index: 1001;
+}
+
+.tooltip {
+  position: relative;
+  width: calc(100% - 30px);
+  max-width: 680px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 30px -10px rgba(0, 0, 0, .5);
+  background: white;
+}
+
+.close {
+  position: absolute;
+  bottom: calc(100% + 15px);
+  right: 0;
+  background: transparent;
+  font-size: 30px;
+  color: white;
+}
+
+.tooltipTitle {
+  margin-bottom: 18px;
+  line-height: 22px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #000000;
+}
+
+.tooltipDesc {
+  font-size: 16px;
+  line-height: 1.63;
+  color: #000000;
+}

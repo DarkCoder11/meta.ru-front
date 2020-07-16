@@ -1,0 +1,377 @@
+.content {
+  width: 100%;
+  height: 70px;
+  counter-increment: reiting__item__count;
+  transition: $main-transition;
+  display: flex;
+  position: relative;
+  border-radius: 8px;
+
+  &:hover {
+    box-shadow: 0 0 30px -8px rgba(0, 0, 0, 0.7);
+
+    @include breakpoint(tablet) {
+      box-shadow: unset;
+    }
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @include breakpoint(tablet) {
+    overflow: hidden;
+    width: calc(100% + 285px);
+    height: 80px;
+    box-shadow: none !important;
+    border-radius: 0;
+  }
+}
+
+.contentContainer {
+  display: flex;
+  margin-bottom: 20px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @include breakpoint(tablet) {
+    margin-bottom: 10px;
+    margin-top: -2px;
+  }
+}
+
+.contentBcont {
+  margin: 0 15px;
+  padding: 8px;
+
+  @include breakpoint(tablet) {
+    max-width: 190px !important;
+    padding: 0 6px !important;
+  }
+
+  span {
+    @include breakpoint(tablet) {
+      margin-left: 6px;
+    }
+  }
+}
+
+.contentActive {
+  background-color: $light-green-color;
+  padding: 5px 30px;
+  font-size: 13px;
+  font-weight: 500;
+  color: $white-color;
+  z-index: -1;
+  min-width: 240px;
+  margin-top: -3px;
+  margin-bottom: -5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  mask: url(/img/achieve.svg);
+  mask-size: cover;
+  mask-position: top;
+  margin-left: 43px;
+  min-height: unset;
+  height: unset;
+
+  @include breakpoint(tablet) {
+    mask: unset;
+    background: $light-green-color;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    max-width: unset;
+    padding: 3px 15px;
+    font-size: 10px;
+    width: 100%;
+    z-index: 2;
+    height: 20px;
+    margin-bottom: 0;
+    min-height: 16px;
+    margin-left: 0;
+  }
+}
+
+.contentActiveNum {
+  font-size: 10px;
+  width: 16px;
+  height: 16px;
+  margin-right: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contentAct {
+  border: 2px solid $light-green-color;
+}
+
+.contentFirst {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  border-radius: 8px;
+  box-shadow: 0 0 20px -10px rgba(0, 0, 0, 0.5);
+  background-color: $white-color;
+  position: relative;
+  width: 100%;
+  padding: 0 25px 0 0px;
+
+  &::before {
+    @include breakpoint(tablet) {
+      content: '';
+      width: 4px;
+      height: 31px;
+      border-radius: 2px;
+      background-color: #f0f0f0;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 5px;
+      transition: all 0.5s ease-in-out;
+    }
+  }
+
+  @include breakpoint(tablet) {
+    border-radius: 0px;
+    min-width: calc(100% - 285px);
+  }
+}
+
+.contentFirstSwiping {
+  &::before {
+    @include breakpoint(tablet) {
+      background: $primary-color;
+    }
+  }
+}
+
+.contentSecond {
+  display: none;
+  min-width: 285px;
+  background: #d8d8d8;
+  align-items: center;
+  justify-content: center;
+
+  @include breakpoint(tablet) {
+    display: flex;
+  }
+}
+
+.contentSwiped {
+  @include breakpoint(tablet) {
+    transform: translateX(-285px);
+  }
+}
+
+.contentBonus {
+  span {
+    @include breakpoint(tablet-m) {
+      font-size: $base-font-size;
+    }
+  }
+}
+
+.contentBonusBtn {
+  height: 40px;
+  padding: 0 8px;
+  border-radius: 6px;
+  border: solid 2px #e9e9e9;
+  background-color: $white-color;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: $base-font-size;
+  font-weight: bold;
+  color: #181818;
+  transition: $main-transition;
+  cursor: pointer;
+  max-width: 162px;
+  min-width: 162px;
+  white-space: nowrap;
+
+  &:hover {
+    color: $primary-color;
+    border-color: $primary-color;
+
+    .ratings_content__item__bonus__btn__svg {
+      background-color: $primary-color;
+    }
+  }
+
+  @include breakpoint(tablet) {
+    display: none;
+  }
+}
+
+.contentBonusBtnSvg {
+  display: block;
+  width: 16px;
+  height: 16px;
+  background-color: $black-color;
+  mask-image: url(/img/bonus.svg);
+  mask-repeat: no-repeat;
+  transition: $main-transition;
+  margin-right: 9px;
+
+  @include breakpoint(tablet) {
+    background-color: $black-color;
+  }
+}
+
+.contentCount {
+  width: 31px;
+  height: 46px;
+  background-image: url('/img/reiting__item__count.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  margin-left: 15px;
+  margin-top: -34px;
+  justify-content: center;
+
+  &::after {
+    content: counter(reiting__item__count);
+    font-size: 18px;
+    font-weight: bold;
+    color: $white-color;
+    margin-top: 11px;
+
+    @include breakpoint(tablet) {
+      margin-top: 12px;
+    }
+  }
+}
+
+.contentLogo {
+  width: 100px;
+  height: 100%;
+  text-align: center;
+  margin: 0;
+  position: relative;
+
+  img {
+    -o-object-fit: contain;
+    object-fit: contain;
+    height: 30px;
+  }
+}
+
+.contentRate {
+  width: 40px;
+  height: 40px;
+  border-radius: 6px;
+  background-color: $light-green-color;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: 600;
+  color: $white-color;
+  cursor: pointer;
+}
+
+.contentReviews {
+  @include breakpoint(tablet) {
+    display: none;
+  }
+}
+
+.contentReviewsCount {
+  width: 55px;
+  height: 40px;
+  padding-top: 7px;
+  text-align: center;
+  font-size: 15px;
+  font-weight: bold;
+  color: #181818;
+  cursor: pointer;
+  position: relative;
+
+  &:hover svg path {
+    stroke: $primary-color;
+
+    @include breakpoint(tablet) {
+      stroke: #e9e9e9;
+    }
+  }
+}
+
+.contentReviewsCountSvg {
+  position: absolute;
+  left: 0;
+  top: 0;
+
+  path {
+    transition: $main-transition;
+  }
+}
+
+.contentOverview {
+  width: 90px;
+  height: 40px;
+  border-radius: 20px;
+  border: solid 2px #e9e9e9;
+  background-color: $white-color;
+  font-size: 16px;
+  font-weight: bold;
+  color: #181818;
+  transition: $main-transition;
+
+  &:hover {
+    color: $primary-color;
+    border-color: $primary-color;
+  }
+
+  @include breakpoint(tablet) {
+    display: none;
+  }
+}
+
+.contentBtn {
+  width: 90px;
+  height: 40px;
+  border-radius: 20px;
+  background-color: $primary-color;
+  font-size: 16px;
+  font-weight: bold;
+  color: $white-color;
+  transition: $main-transition;
+
+  &:hover {
+    background-color: #1fa94a;
+  }
+
+  @include breakpoint(tablet) {
+    display: none;
+  }
+}
+
+.contentGlobus {
+  margin-right: 11px;
+}
+
+.contentOverviewSVG {
+  width: 40px;
+  height: 40px;
+  background-color: #f0f0f0;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    width: 16px;
+    height: 20px;
+  }
+}
+
+.contentOverviewSVGHome {
+  margin-right: -10px;
+}
+

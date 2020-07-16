@@ -1,0 +1,475 @@
+@import '../../styles/base/index.global';
+
+.title {
+  display: block;
+  width: 100%;
+  max-width: 920px;
+  margin: 30px auto 15px;
+  font-family: $base-font-family;
+  font-size: 22px;
+  line-height: 20px;
+  color: #ffffff;
+
+  @include breakpoint(tablet-m) {
+    margin: 23px auto 9px;
+    font-size: 16px;
+  }
+}
+
+.divider {
+  width: 100%;
+  max-width: 920px;
+  height: 2px;
+  margin: 0 auto;
+  background: white;
+}
+
+.btn {
+  display: block;
+  width: 100%;
+  max-width: 920px;
+  height: 40px;
+  border-radius: 8px;
+  background-color: #e8e8e8;
+  text-align: center;
+  color: black;
+  line-height: 40px;
+}
+
+.filmCardsWrap {
+  display: flex;
+  width: auto;
+  max-width: 920px;
+  margin: 20px auto 10px;
+  overflow-x: auto;
+}
+
+.filmCardWrap {
+  position: relative;
+  width: 215px;
+  height: 290px;
+  background-size: cover;
+  margin-right: 20px;
+  cursor: pointer;
+
+  @include breakpoint(desktop) {
+    width: calc(30% - 24px);
+    min-width: 110px;
+    height: 160px;
+    margin-right: 12px;
+  }
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.rating {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  width: 40px;
+  height: 40px;
+  border-radius: 6px;
+  background-color: #20a94a;
+  font-family: $base-font-family;
+  font-size: 18px;
+  line-height: 40px;
+  font-weight: bold;
+  text-align: center;
+  color: #ffffff;
+
+  @include breakpoint(desktop) {
+
+    width: 20px;
+    height: 18px;
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+
+.descWrap {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: auto;
+  max-height: 140px;
+  padding: 15px;
+  background: linear-gradient(to top, black, black, transparent);
+
+  :first-child {
+    display: block;
+    max-height: 93px;
+    overflow: hidden;
+    margin-bottom: 4px;
+    font-family: $base-font-family;
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+    text-overflow: ellipsis;
+
+    @include breakpoint(tablet-m) {
+      font-size: 10px;
+    }
+  }
+
+  :last-child {
+    font-family: $base-font-family;
+    font-size: 14px;
+    color: #cbcbcb;
+
+    @include breakpoint(tablet-m) {
+      font-size: 10px;
+    }
+  }
+
+  @include breakpoint(desktop) {
+
+    padding: 8px;
+  }
+  @include breakpoint(tablet-m) {
+    height: 52px;
+  }
+}
+
+.filmRatingWrap {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+
+    @include breakpoint(tablet-m) {
+    margin-top: 10px;
+  }
+}
+
+.cinemaRatingWrap {
+  width: calc(100% - 30px);
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 0 12px;
+  background: white;
+}
+
+.wrap {
+  width: calc(100% - 30px);
+  max-width: 920px;
+  margin: 0 auto;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  background: rgba(black, 0.8);
+  z-index: 1000;
+  overflow: auto;
+}
+
+.emptyResponse {
+  position: absolute;
+  left: 50%;
+  top: 200px;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: calc(100% - 30px);
+  max-width: 332px;
+  height: 75px;
+  border-radius: 8px;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  font-family: $base-font-family;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.description {
+  display: block;
+  overflow: hidden;
+
+  @include breakpoint(desktop) {
+
+    font-size: 10px;
+  }
+}
+
+//rating card
+
+.cinemaWrap {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 70px;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 20px -10px rgba(0, 0, 0, 0.5);
+  background-color: white;
+
+  & > * {
+    margin-right: 15px;
+  }
+
+  :last-child {
+    margin-right: 0;
+  }
+
+  @include breakpoint(tablet-m) {
+    height: 50px;
+    margin-bottom: 10px;
+  }
+}
+
+.cinemaRating {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 6px;
+  font-family: $base-font-family;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  background-color: #20a94a;
+  color: white;
+}
+
+.onSiteBtn {
+  width: 150px;
+  height: 40px;
+  border-radius: 20px;
+  background-color: #601dc0;
+  font-family: $base-font-family;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  color: #ffffff;
+}
+
+.logo {
+  flex: 1 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 192px;
+  height: 100%;
+
+  img {
+    width: auto;
+    max-width: 130px;
+    height: auto;
+    max-height: 30px;
+  }
+
+  @include breakpoint(tablet-m) {
+    width: 100px;
+    img {
+      max-width: 100px;
+    }
+  }
+}
+
+.reviewsCount {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 82px;
+  height: 40px;
+  padding: 6px;
+  border-radius: 4px;
+  background-color: #f7f7f7;
+  font-family: $base-font-family;
+  font-size: 16px;
+  font-weight: bold;
+  color: black;
+
+  &:before {
+    content: '';
+    display: block;
+    width: 28px;
+    height: 28px;
+    border-radius: 4px;
+    background-color: #fff;
+    background-image: url('/img/reviews__overview.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 18px 14px;
+  }
+}
+
+.reviewBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 40px;
+  border-radius: 20px;
+  border: solid 2px #e9e9e9;
+  background-color: #ffffff;
+  font-family: $base-font-family;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  color: #181818;
+
+  @include breakpoint(desktop) {
+
+    width: 40px;
+    font-size: 0;
+    background-size: 22px 22px;
+    background-position: center;
+  }
+}
+
+.onSiteBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 40px;
+  border-radius: 20px;
+  background-color: #601dc0;
+
+  @include breakpoint(desktop) {
+
+    width: 40px;
+    font-size: 0;
+    background-size: 22px 22px;
+    background-position: center;
+  }
+}
+
+.price {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 201px;
+  height: 40px;
+  padding: 8px;
+  border-radius: 4px;
+  background-color: #f7f7f7;
+  font-family: $base-font-family;
+  font-size: 16px;
+  font-weight: bold;
+  color: black;
+  white-space: nowrap;
+
+  &Image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 8px !important;
+
+    width: 28px;
+    height: 28px;
+    margin-right: 14px;
+    border-radius: 4px;
+    background-color: #fff;
+  }
+}
+
+.closeLeft {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: calc(50vw - 460px);
+  background: transparent;
+
+  @include breakpoint(desktop) {
+    bottom: auto;
+    right: 0;
+    width: 100%;
+    height: 80px;
+  }
+}
+
+.closeRight {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: calc(50vw - 460px);
+  background: transparent;
+
+  @include breakpoint(desktop) {
+    display: none;
+  }
+}
+
+.cinemaWrapMobile {
+  width: calc(100vw - 3px);
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 90px;
+  padding: 15px;
+  box-shadow: 0 2px 20px -10px rgba(0, 0, 0, 0.5);
+  background-color: white;
+
+  & > * {
+    margin-right: 15px;
+  }
+
+  :last-child {
+    margin-right: 0;
+  }
+}
+
+.achievement {
+  position: relative;
+  width: fit-content;
+  height: fit-content;
+  background: transparent;
+  border: 1.5px solid #20a94a;
+  margin-bottom: 40px;
+  border-radius: 8px;
+  overflow: hidden;
+
+  @include breakpoint(tablet) {
+    left: -15px;
+    margin-bottom: 30px;
+  }
+}
+
+.achievementDesc {
+  position: absolute;
+  top: 100%;
+  left: 24px;
+  background-color: #20a94a;
+  padding: 5px 30px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #fff;
+  z-index: -1;
+  min-width: 240px;
+  margin-top: -3px;
+  margin-bottom: -5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  mask: url('/img/achieve.svg');
+  mask-size: cover;
+  mask-position: top;
+  min-height: unset;
+  height: unset;
+
+  @include breakpoint(tablet) {
+    width: 100%;
+    mask: none;
+    left: 0;
+  }
+}

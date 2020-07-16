@@ -1,0 +1,81 @@
+.btn {
+  height: 34px;
+  border-radius: 8px;
+  border: solid 1.5px;
+  background-color: $white-color;
+  min-width: 210px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  color: $black-color;
+  cursor: pointer;
+  margin-left: 10px;
+
+  &:first-child {
+    margin-left: 0;
+  }
+}
+
+.block {
+  display: flex;
+  justify-content: space-between;
+  overflow-x: auto;
+
+  @include breakpoint(tablet) {
+    margin: 0 -15px;
+    position: relative;
+  }
+
+  &::after {
+    content: '';
+    position: relative;
+    width: 15px;
+    height: 1px;
+    padding: 0 0 0 15px;
+    top: 9px;
+    display: none;
+
+    @include breakpoint(tablet) {
+      display: block;
+    }
+  }
+
+  &::before {
+    content: '';
+    position: relative;
+    width: 15px;
+    height: 1px;
+    padding: 0 0 0 15px;
+    top: 9px;
+    display: none;
+
+    @include breakpoint(tablet) {
+      display: block;
+    }
+  }
+}
+
+.positive {
+  border-color: #54ba77;
+
+  span {
+    color: #54ba77;
+  }
+}
+
+.neutral {
+  border-color: #f8e71c;
+
+  span {
+    color: #f8e71c;
+  }
+}
+
+.negative {
+  border-color: #d0021b;
+
+  span {
+    color: #d0021b;
+  }
+}

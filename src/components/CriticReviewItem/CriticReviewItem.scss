@@ -1,0 +1,123 @@
+.movie__reviews_icon {
+  width: 317px;
+  height: 170px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px -5px rgba(0, 0, 0, 0.2);
+  border: solid 0.5px #ebebeb;
+  background-color: $white-color;
+  padding: 8px 15px 15px;
+  cursor: pointer;
+  transition: $main-transition;
+
+  @include breakpoint(tablet-l) {
+    min-width: 315px;
+    margin: 0 7.5px;
+
+    &:first-child {
+      margin-left: 15px;
+    }
+  }
+}
+
+.desc {
+  position: relative;
+}
+
+.fade {
+  position: absolute;
+  bottom: 0px;
+  width: 66px;
+  height: 23px;
+  right: 0;
+  display: block;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.8),
+    rgba(255, 255, 255, 1) 100%
+  );
+}
+
+.title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 9px;
+
+  div {
+    display: flex;
+  }
+
+  button {
+    width: 30px;
+    height: 30px;
+    background-color: $light-green-color;
+    color: $white-color;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+  }
+}
+
+.nameTitle {
+  flex-direction: column;
+
+  p {
+    &:nth-child(1) {
+      font-size: $base-font-size;
+      font-weight: bold;
+      columns: $black-color;
+    }
+
+    &:nth-child(2) {
+      font-size: 12px;
+      color: #777;
+    }
+  }
+}
+
+.dataTitle {
+  font-size: 12px;
+  color: #777777;
+  display: flex;
+  align-self: baseline;
+}
+
+.content {
+  height: 102px;
+  max-width: 285px;
+  overflow: hidden;
+  position: relative;
+  line-height: 1.43;
+  font-size: $base-font-size;
+
+  &::-webkit-scrollbar {
+    width: 4px;
+    background-color: #f5f5f5;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $grey-color;
+  }
+}
+
+.contentScroll {
+  overflow-y: scroll;
+}
+
+.more {
+  right: 0;
+  bottom: 0;
+  font-size: 16px;
+  position: absolute;
+  color: $light-green-color;
+  background-color: transparent;
+  text-decoration: underline !important;
+}
+
+.moreActive {
+  bottom: unset;
+}

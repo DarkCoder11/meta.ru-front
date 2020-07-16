@@ -1,0 +1,50 @@
+.title {
+  font-size: 20px;
+  font-weight: bold;
+  color: $black-color;
+}
+
+.genre {
+  max-width: 353px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+
+  @include breakpoint(tablet) {
+    max-width: 110px;
+  }
+}
+
+.block {
+  width: 100%;
+  border-radius: 8px;
+  background-color: #f7f7f7;
+  padding: 15px 15px 16px;
+  margin: 40px 0;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 15px;
+
+  &:nth-child(odd) {
+    border-radius: 8px;
+    background-color: $white-color;
+  }
+
+  p {
+    &:nth-child(1) {
+      color: #9c9c9c;
+    }
+
+    &:nth-child(2) {
+      font-weight: bold;
+      color: $black-color;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      margin-left: 10px;
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "containers/*": ["src/containers/*"],
+      "components/*": ["src/components/*"],
+      "libraries/*": ["src/libraries/*"],
+      "layouts/*": ["src/layouts/*"],
+      "styles/*": ["src/styles/*"],
+      "routes/*": ["src/routes*"],
+      "utils/*": ["src/utils/*"],
+      "store/*": ["src/store/*"],
+      "public/*": ["public/*"]
+    }
+  }
+}

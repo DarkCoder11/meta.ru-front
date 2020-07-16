@@ -1,0 +1,123 @@
+.bottom {
+  padding-bottom: 140px;
+
+  @include breakpoint(tablet-l) {
+    padding-bottom: 102px;
+  }
+}
+
+.cinemas {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+
+  @include breakpoint(tablet) {
+    display: none;
+  }
+}
+
+.cinemasDivider {
+  @include breakpoint(tablet) {
+    display: none;
+  }
+}
+
+.cinemasTitle {
+  font-size: 20px;
+  font-weight: bold;
+  color: $white-color;
+}
+
+.tabs {
+  max-width: 330px;
+}
+
+.nav {
+  display: flex;
+  padding-top: 0;
+  margin-top: 30px;
+  margin-bottom: 0;
+  border: 0;
+  max-width: 300px;
+  // max-width: 660px;
+  position: sticky;
+  top: 15px;
+  right: auto;
+  left: auto;
+
+  &::after,
+  &::before {
+    content: none;
+  }
+
+  @include breakpoint(tablet) {
+    max-width: 100%;
+    margin: 0 -15px 0 -15px;
+    width: auto;
+    margin-left: 0 !important;
+    padding: 0 15px 9px 0;
+  }
+
+  @include breakpoint(tablet-l) {
+    margin-top: 20px;
+  }
+
+  button {
+    color: $grey-color;
+
+    &::after {
+      height: 1px;
+    }
+  }
+
+  p {
+    margin-left: 33px;
+    font-size: 18px;
+    color: $grey-color;
+    cursor: pointer;
+    font-weight: bold;
+
+    &:first-child {
+      margin-left: 0;
+      color: $black-color;
+    }
+  }
+}
+
+.navSticky {
+  height: 46px;
+  z-index: 99;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 0 30px -10px rgba(0, 0, 0, 0.5);
+  padding: 0 20px;
+  max-width: 100% !important;
+  justify-content: flex-start;
+
+  @include breakpoint(tablet) {
+    top: 0;
+    border-radius: 0;
+    max-width: unset !important;
+    margin-left: -15px !important;
+  }
+
+  button {
+    margin-right: 30px;
+  }
+}
+
+.navDivider {
+  margin-top: -1px;
+  height: 1px;
+}
+
+.navStickyItem {
+  &::after {
+    bottom: 0;
+
+    @include breakpoint(tablet-l) {
+      content: none;
+    }
+  }
+}

@@ -1,0 +1,14 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  svg {
+    display: flex;
+    min-height: calc(100vh - 317px);
+
+     @include breakpoint(tablet-l) {
+      min-height: calc(100vh - 309px);
+    }
+  }
+}

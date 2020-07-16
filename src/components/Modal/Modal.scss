@@ -1,0 +1,57 @@
+.popup {
+  max-width: 680px;
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 0 30px -10px rgba(0, 0, 0, 0.5);
+  background-color: $white-color;
+  margin: 97px auto 0;
+  padding: 20px;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.block {
+  background-color: rgba(12, 15, 22, 0.5);
+  position: fixed;
+  top: 45px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 99;
+  padding: 0 15px;
+  overflow: auto;
+
+  @include breakpoint(tablet-m) {
+    top: 44px;
+  }
+}
+
+.close {
+  width: 20px;
+  height: 20px;
+  background-image: url(/img/close__menu__white.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-color: transparent;
+  position: absolute;
+  right: -23.8px;
+  top: -23.8px;
+  cursor: pointer;
+
+  @include breakpoint(tablet) {
+    right: 0;
+    top: -30px;
+  }
+}
+
+.title {
+  font-size: 22px;
+  font-weight: bold;
+  color: $black-color;
+  margin-bottom: 15px;
+
+  @include breakpoint(tablet-m) {
+    font-size: 18px;
+  }
+}

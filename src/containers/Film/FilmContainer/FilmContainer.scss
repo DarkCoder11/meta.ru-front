@@ -1,0 +1,37 @@
+.container {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.containerContent {
+  margin-top: -210px !important;
+
+  @include breakpoint(tablet-l) {
+    margin-top: -236px !important;
+  }
+
+  @include breakpoint(tablet) {
+    margin-top: -266px !important;
+  }
+
+  @include breakpoint(tablet-m) {
+    margin-top: -316px !important;
+  }
+}
+
+.containerContentLeft {
+  padding-bottom: 47px;
+
+  @include breakpoint(tablet-l) {
+    display: none;
+  }
+}
+
+.containerContentRight {
+  @include breakpoint(tablet-l) {
+    max-width: 100%;
+  }
+}

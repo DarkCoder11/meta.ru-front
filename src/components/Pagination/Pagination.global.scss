@@ -1,0 +1,92 @@
+.content {
+  display: flex;
+  max-width: 350px;
+  width: 100%;
+  margin: 20px auto 0;
+  align-items: center;
+
+  @include breakpoint(tablet-m) {
+    display: none;
+  }
+
+  &-item,
+  &-jump-next,
+  &-jump-prev {
+    max-width: 35px;
+    min-width: 34px;
+    height: 34px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: 2px solid #e9e9e9;
+    border-left: none;
+    transition: 0.5s;
+    cursor: pointer;
+    background: transparent;
+    font-size: 14px;
+  }
+
+  &-item:hover,
+  &-jump-next:hover,
+  &-jump-prev:hover {
+    color: $white-color;
+    background: #e9e9e9;
+
+    @include breakpoint(tablet) {
+      background: transparent;
+    }
+  }
+
+  &-item:nth-child(2),
+  &-jump-next:nth-child(2),
+  &-jump-prev:nth-child(2) {
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    border-left: 2px solid #e9e9e9;
+  }
+
+  &-item:nth-last-child(2),
+  &-jump-next:nth-last-child(2),
+  &-jump-prev:nth-last-child(2) {
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+  }
+
+  &-item a,
+  &-jump-next a,
+  &-jump-prev a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: inherit;
+  }
+
+  &-item-active {
+    color: $white-color;
+    background: #e9e9e9;
+  }
+
+  &-prev,
+  &-next,
+  &-prev a,
+  &-next a {
+    min-width: 24px;
+    min-height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+
+  &-next {
+    margin-left: 15px;
+  }
+
+  &-prev {
+    margin-right: 15px;
+  }
+}

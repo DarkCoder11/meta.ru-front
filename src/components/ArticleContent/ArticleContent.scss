@@ -1,0 +1,105 @@
+.content {
+  @include breakpoint(tablet-m) {
+    margin-top: 30px;
+  }
+}
+
+.logo {
+  max-width: 100px;
+
+  @include breakpoint(tablet-l) {
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  @include breakpoint(tablet-m) {
+    max-width: 80px;
+  }
+
+  @include breakpoint(mobile-m) {
+    max-width: 50px;
+  }
+}
+
+.articles {
+  margin-top: 20px;
+}
+
+.rating {
+  span {
+    font-size: 16px;
+    color: $black-color;
+
+    &:nth-child(2) {
+      font-weight: bold;
+    }
+  }
+}
+
+.ratingTitle {
+  margin-top: 20px;
+  margin-bottom: 9px;
+}
+
+.tags {
+  margin-top: 20px;
+}
+
+.tagsTitle {
+  font-size: 16px;
+  color: $black-color;
+  margin-bottom: 10px;
+}
+
+.tagsRow {
+  display: flex;
+
+  button {
+    margin-right: 10px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.text {
+  font-size: 16px;
+  line-height: 1.5;
+  color: $black-color;
+
+  span strong {
+    color: $light-green-color;
+  }
+
+  a {
+    color: $light-green-color;
+    display: inline;
+  }
+}
+
+.cinemaInfoTitle {
+  font-size: 22px;
+  font-weight: 700;
+  color: $black-color;
+
+  @include breakpoint(tablet-m) {
+    font-size: 20px;
+  }
+}
+
+.postedBy {
+  margin-top: 20px;
+}
+
+.postedByText,
+.postedBySource {
+  line-height: 1.43;
+  font-size: $base-font-size;
+  color: #999;
+
+  span {
+    color: $black-color;
+    font-weight: bold;
+  }
+}
